@@ -171,6 +171,9 @@ class Domain
         if ($this->blockAll) // blacklist priority
             return true;
         
+        if ($this->count() == 0)
+            return true;
+        
         return $this->count() >= 3;
     }
     
