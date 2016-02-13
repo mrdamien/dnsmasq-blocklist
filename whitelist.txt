@@ -35,3 +35,4 @@ dailymail.co.uk
 go.com
 youtube.com
 blogspot.com
+amazon.com
