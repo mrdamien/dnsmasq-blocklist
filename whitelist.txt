@@ -37,3 +37,4 @@ youtube.com
 blogspot.com
 amazon.com
 indiatimes.com
+microsoft.com
