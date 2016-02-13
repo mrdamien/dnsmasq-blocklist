@@ -33,3 +33,4 @@ foxnews.com
 guardian.co.uk
 dailymail.co.uk
 go.com
+youtube.com
