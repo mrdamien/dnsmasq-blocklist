@@ -38,3 +38,4 @@ blogspot.com
 amazon.com
 indiatimes.com
 microsoft.com
+bing.com
