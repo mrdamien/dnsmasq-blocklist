@@ -15,6 +15,7 @@ class FileScanner
             if ($line == false)
                 return false;
             
+            $line = str_replace("\t", " ", strtolower($line));
             $line = trim($line);
             if (strlen($line) === 0 || $line[0] === '#')
                 continue;
@@ -211,26 +212,56 @@ function domainIterate($domain, $writer, $depth = 0)
     }
 }
 
+function download ($url, $file) {
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $output = curl_exec($ch);
+    file_put_contents($file, $output);
+}
 
-echo "Downloading hosts.zip\n";
-$url = 'http://winhelp2002.mvps.org/hosts.zip';
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$output = curl_exec($ch);
-file_put_contents('temp.zip', $output);
+$hosts = [
+    'http://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0' => "pgl.yoyo.txt",
+    'http://adaway.org/hosts.txt' => "adaway.org.txt",
+    'http://www.malwaredomainlist.com/hostslist/hosts.txt' => "malwaredomainlist.com.txt",
+    'http://someonewhocares.org/hosts/zero/hosts' => "someonewhocares.org.txt",
+];
+foreach ($hosts as $url=>$file) {
+    echo "Downloading $url\n";
+    download($url, $file);
+}
+$zipped = [
+    'http://winhelp2002.mvps.org/hosts.zip' => "mvps.txt.zip"
+];
 
-echo "Unziping file\n";
-$zip = new ZipArchive;
-$res = $zip->open('temp.zip');
-$zip->extractTo('./', 'HOSTS');
-$zip->close();
+foreach ($zipped as $url=>$file) {
+    download($url, $file);
+    echo "Unziping file\n";
+    $zip = new ZipArchive;
+    $res = $zip->open($file);
+    $zip->extractTo('./', 'HOSTS');
+    $zip->close();
+    rename("HOSTS", substr($file, 0, -4));
+}
 
-
-$rs = fopen('HOSTS', 'r');
-$in = new FileScanner($rs);
-while (($domain = $in->next()) !== false) {
-    $root->addDomain($domain);
+foreach ($zipped as $url=>$file) {
+    $file = substr($file, 0, -4);
+    echo "Adding from: $file\n";
+    $rs = fopen($file, 'r');
+    $in = new FileScanner($rs);
+    while (($domain = $in->next()) !== false) {
+        $root->addDomain($domain);
+    }
+    
+}
+foreach ($hosts as $url=>$file) {
+    echo "Adding from: $file\n";
+    $rs = fopen($file, 'r');
+    $in = new FileScanner($rs);
+    while (($domain = $in->next()) !== false) {
+        $root->addDomain($domain);
+    }
+    
 }
 
 
