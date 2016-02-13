@@ -41,3 +41,10 @@ microsoft.com
 bing.com
 independent.co.uk
 google.com
+github.com
+bitbucket.org
+news.com
+theonion.com
+theweathernetwork.com
+tucows.com
+tv.com
