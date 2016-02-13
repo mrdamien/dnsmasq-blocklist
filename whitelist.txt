@@ -40,3 +40,4 @@ indiatimes.com
 microsoft.com
 bing.com
 independent.co.uk
+google.com

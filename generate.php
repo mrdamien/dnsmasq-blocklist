@@ -152,6 +152,7 @@ class Domain
     
     public function getChildren ()
     {
+        ksort($this->children);
         reset($this->children);
         return $this->children;
     }
@@ -213,6 +214,7 @@ function domainIterate($domain, $writer, $depth = 0)
 }
 
 function download ($url, $file) {
+    echo "Downloading $url\n";
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -227,7 +229,6 @@ $hosts = [
     'http://someonewhocares.org/hosts/zero/hosts' => "someonewhocares.org.txt",
 ];
 foreach ($hosts as $url=>$file) {
-    echo "Downloading $url\n";
     download($url, $file);
 }
 $zipped = [
