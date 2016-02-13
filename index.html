@@ -2,55 +2,62 @@
 <html lang="en">
 <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title></title>
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="skeleton.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
       <div class="column" style="margin-top: 25%">
-        <h4>Sample usage:</h4>
+        <h4>Sample for an asus router:</h4>
         <p>
 <pre>
-cd /tmp
+#!/bin/sh
+cd /tmp/mnt/USBDriveName/asusware
 rm hosts.txt
 wget http://mrdamien.github.io/dnsmasq-blocklist/hosts.txt
 killall dnsmasq
-cat hosts.txt >> /etc/dnsmasq.conf
-dnsmasq --log-async &amp;
+echo "" > /tmp/etc/dnsmasq.conf
+echo "pid-file=/var/run/dnsmasq.pid" >> /tmp/etc/dnsmasq.conf
+echo "user=nobody" >> /tmp/etc/dnsmasq.conf
+echo "bind-dynamic" >> /tmp/etc/dnsmasq.conf
+echo "interface=br0" >> /tmp/etc/dnsmasq.conf
+echo "interface=ppp1*" >> /tmp/etc/dnsmasq.conf
+echo "no-dhcp-interface=ppp1*" >> /tmp/etc/dnsmasq.conf
+echo "resolv-file=/tmp/resolv.conf" >> /tmp/etc/dnsmasq.conf
+echo "servers-file=/tmp/resolv.dnsmasq" >> /tmp/etc/dnsmasq.conf
+echo "no-poll" >> /tmp/etc/dnsmasq.conf
+echo "no-negcache" >> /tmp/etc/dnsmasq.conf
+echo "cache-size=2000" >> /tmp/etc/dnsmasq.conf
+echo "min-port=4096" >> /tmp/etc/dnsmasq.conf
+echo "dhcp-range=lan,192.168.1.2,192.168.1.254,255.255.255.0,86400s" >> /tmp/etc/dnsmasq.conf
+echo "dhcp-option=lan,3,192.168.1.1" >> /tmp/etc/dnsmasq.conf
+echo "dhcp-option=lan,6,192.168.1.1,0.0.0.0" >> /tmp/etc/dnsmasq.conf
+echo "dhcp-option=lan,44,192.168.1.1" >> /tmp/etc/dnsmasq.conf
+echo "dhcp-option=lan,252,\"\n\"" >> /tmp/etc/dnsmasq.conf
+echo "dhcp-authoritative" >> /tmp/etc/dnsmasq.conf
+echo "read-ethers" >> /tmp/etc/dnsmasq.conf
+cat hosts.txt >> /tmp/etc/dnsmasq.conf
+dnsmasq &
 </pre>
         
         </p>
+        
+        <p>Asus routers will run ./asusware/.asusrouter scripts on startup</p>
       </div>
     </div>
   </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
 </body>
 </html>
