@@ -51,3 +51,4 @@ tv.com
 telegraph.co.uk
 alibaba.com
 akamaihd.net
+ap.org
