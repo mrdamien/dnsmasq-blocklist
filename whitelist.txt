@@ -53,3 +53,4 @@ alibaba.com
 akamaihd.net
 ap.org
 chron.com
+appspot.com
