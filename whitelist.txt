@@ -54,3 +54,5 @@ akamaihd.net
 ap.org
 chron.com
 appspot.com
+co.jp
+japantimes.co.jp
