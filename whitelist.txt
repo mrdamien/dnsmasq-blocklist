@@ -57,3 +57,4 @@ appspot.com
 co.jp
 japantimes.co.jp
 economist.com
+cbc.ca
