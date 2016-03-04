@@ -59,3 +59,6 @@ japantimes.co.jp
 economist.com
 cbc.ca
 ink.com
+skype.com
+live.com
+m.hotmail.com
