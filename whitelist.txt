@@ -65,3 +65,4 @@ m.hotmail.com
 boston.com
 sitepoint.com
 org.uk
+newsinc.com
