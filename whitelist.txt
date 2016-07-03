@@ -66,3 +66,4 @@ boston.com
 sitepoint.com
 org.uk
 newsinc.com
+nationalgeographic.com
