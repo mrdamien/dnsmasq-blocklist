@@ -32,6 +32,7 @@ slate.com
 foxnews.com
 guardian.co.uk
 dailymail.co.uk
+clamav.net
 go.com
 youtube.com
 blogspot.com
@@ -67,3 +68,4 @@ sitepoint.com
 org.uk
 newsinc.com
 nationalgeographic.com
+nj.com
