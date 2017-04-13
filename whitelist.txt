@@ -70,3 +70,5 @@ org.uk
 newsinc.com
 nationalgeographic.com
 nj.com
+sfgate.com
+huffingtonpost.com
