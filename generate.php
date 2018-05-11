@@ -152,6 +152,22 @@ class Domain
     
     public function getChildren ()
     {
+        usort($this->children, function($a, $b) {
+            $a = explode('.', $a->getDomain());
+            $b = explode('.', $b->getDomain());
+            $i = 1;
+            while (true) {
+                if (!isset($a[count($a)-$i])) return -1;
+                if (!isset($b[count($b)-$i])) return 1;
+                switch ($d = strcmp($a[count($a)-$i], $b[count($b)-$i])) {
+                    case 0:
+                        $i++;
+                        break;
+                    default:
+                        return $d;
+                }
+            }
+        });
         ksort($this->children);
         reset($this->children);
         return $this->children;
