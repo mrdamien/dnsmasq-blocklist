@@ -74,3 +74,4 @@ sfgate.com
 huffingtonpost.com
 l.google.com
 vice.com
+webmd.com
