@@ -1,3 +1,4 @@
 popcash.net
 contentabc.com
-chartbeat.com
+.chartbeat.com
+.chartbeat.net
