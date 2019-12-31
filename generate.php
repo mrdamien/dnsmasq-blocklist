@@ -3,7 +3,7 @@ class FileScanner
 {
     private $rs;
     
-    public function FileScanner ($rs)
+    public function __construct ($rs)
     {
         $this->rs = $rs;
     }
@@ -61,7 +61,7 @@ class Domain
     private $whitelist = false;
     private $whitelistcount = 0;
     
-    public function Domain($d) 
+    public function __construct($d) 
     {
         $this->domain = trim($d);
         $this->children = [];
