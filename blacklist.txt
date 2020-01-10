@@ -3,3 +3,4 @@ contentabc.com
 .chartbeat.com
 .chartbeat.net
 boredpanda.com
+.spot.im
