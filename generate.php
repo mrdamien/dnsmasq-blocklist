@@ -126,6 +126,9 @@ class Domain
     
     public function addDomain ($domain)
     {
+        if (!\mb_check_encoding($domain, 'ASCII')) {
+            return null;
+        }
         $parts = explode('.', $domain);
         $last = array_pop($parts);
         
