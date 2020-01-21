@@ -1,5 +1,4 @@
-adservices.google.com
-adservice.google.com
+1e100.net
 googleapis.com
 s.youtube.com
 s2.youtube.com
