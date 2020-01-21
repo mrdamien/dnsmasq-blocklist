@@ -1,4 +1,5 @@
 1e100.net
+netflix.com
 googleapis.com
 s.youtube.com
 s2.youtube.com
