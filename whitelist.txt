@@ -1,5 +1,7 @@
 1e100.net
 netflix.com
+beacon.netflix.com
+beacon.geo.netflix.com
 googleapis.com
 s.youtube.com
 s2.youtube.com
