@@ -1,3 +1,6 @@
+s.youtube.com
+s2.youtube.com
+youtube.com
 s3.amazonaws.com
 wordpress.com
 deviantart.com
