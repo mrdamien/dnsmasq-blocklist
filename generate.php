@@ -233,16 +233,17 @@ function download ($url, $file) {
     echo "Downloading $url\n";
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $output = curl_exec($ch);
     file_put_contents($file, $output);
 }
 
 $hosts = [
-    'http://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0' => "pgl.yoyo.txt",
-    'http://adaway.org/hosts.txt' => "adaway.org.txt",
+    'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0' => "pgl.yoyo.txt",
+    'https://adaway.org/hosts.txt' => "adaway.org.txt",
     'http://www.malwaredomainlist.com/hostslist/hosts.txt' => "malwaredomainlist.com.txt",
-    'http://someonewhocares.org/hosts/zero/hosts' => "someonewhocares.org.txt",
+    'https://someonewhocares.org/hosts/zero/hosts' => "someonewhocares.org.txt",
 ];
 foreach ($hosts as $url=>$file) {
     download($url, $file);
