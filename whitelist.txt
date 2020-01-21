@@ -1,3 +1,6 @@
+adservices.google.com
+adservice.google.com
+googleapis.com
 s.youtube.com
 s2.youtube.com
 youtube.com
