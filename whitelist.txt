@@ -10,6 +10,8 @@ youtube.com
 s3.amazonaws.com
 wordpress.com
 deviantart.com
+pinterest.com
+facebook.com
 msn.com
 salon.com
 nytimes.com
