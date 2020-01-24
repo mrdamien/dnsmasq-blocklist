@@ -1,4 +1,5 @@
 aliexpress.com
+walmart.com
 imgix.net
 kxcdn.com
 1e100.net
