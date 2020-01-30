@@ -29,6 +29,7 @@ bbc.co.uk
 about.com
 theglobeandmail.com
 com.au
+com.my
 net.au
 org.au
 edgesuite.net
