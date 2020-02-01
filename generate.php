@@ -248,12 +248,18 @@ $hosts = [
     'http://www.malwaredomainlist.com/hostslist/hosts.txt' => "malwaredomainlist.com.txt",
     'https://someonewhocares.org/hosts/zero/hosts' => "someonewhocares.org.txt",
 ];
-foreach ($hosts as $url=>$file) {
-    download($url, $file);
-}
+
 $zipped = [
     'http://winhelp2002.mvps.org/hosts.zip' => "mvps.txt.zip"
 ];
+
+if (count($argv) > 1 & $argv[1] === 'no') {
+    goto skip;
+}
+
+foreach ($hosts as $url=>$file) {
+    download($url, $file);
+}
 
 foreach ($zipped as $url=>$file) {
     download($url, $file);
@@ -264,7 +270,7 @@ foreach ($zipped as $url=>$file) {
     $zip->close();
     rename("HOSTS", substr($file, 0, -4));
 }
-
+skip:
 foreach ($zipped as $url=>$file) {
     $file = substr($file, 0, -4);
     echo "Adding from: $file\n";
