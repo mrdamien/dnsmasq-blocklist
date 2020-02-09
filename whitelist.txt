@@ -24,6 +24,7 @@ co.nz
 co.za
 co.th
 co.uk
+co.il
 brightcove.com
 bbc.co.uk
 about.com
