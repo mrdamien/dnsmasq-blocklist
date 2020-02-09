@@ -33,6 +33,7 @@ com.au
 com.my
 net.au
 org.au
+townhall.com
 edgesuite.net
 com.edgesuite.net
 yahoo.com
