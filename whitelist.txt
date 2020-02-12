@@ -34,6 +34,7 @@ com.my
 net.au
 org.au
 townhall.com
+taobao.com
 edgesuite.net
 com.edgesuite.net
 yahoo.com
