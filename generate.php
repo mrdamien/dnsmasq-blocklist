@@ -253,7 +253,7 @@ $zipped = [
     'http://winhelp2002.mvps.org/hosts.zip' => "mvps.txt.zip"
 ];
 
-if (count($argv) > 1 & $argv[1] === 'no') {
+if (count($argv) > 1 && $argv[1] === 'no') {
     goto skip;
 }
 
