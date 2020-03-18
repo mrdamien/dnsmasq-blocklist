@@ -62,6 +62,9 @@ blogspot.com
 amazon.com
 indiatimes.com
 microsoft.com
+edgekey.net
+com.edgekey.net
+net.edgekey.net
 msecnd.net
 vo.msecnd.net
 bing.com
