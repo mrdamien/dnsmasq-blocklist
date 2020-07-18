@@ -104,3 +104,6 @@ vice.com
 webmd.com
 demdex.net
 dpm.demdex.net
+permutive.com
+api.permutive.com
+cdn.permutive.com
