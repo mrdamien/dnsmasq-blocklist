@@ -102,3 +102,4 @@ huffingtonpost.com
 l.google.com
 vice.com
 webmd.com
+akamaized.net
