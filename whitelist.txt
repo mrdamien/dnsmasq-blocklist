@@ -103,3 +103,4 @@ l.google.com
 vice.com
 webmd.com
 akamaized.net
+nicovideo.jp
