@@ -33,6 +33,7 @@ com.au
 com.my
 net.au
 org.au
+com.tr
 townhall.com
 taobao.com
 edgesuite.net
