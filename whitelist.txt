@@ -105,3 +105,4 @@ vice.com
 webmd.com
 akamaized.net
 nicovideo.jp
+rottentomatoes.com
