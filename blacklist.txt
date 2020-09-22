@@ -4,3 +4,5 @@ contentabc.com
 .chartbeat.net
 boredpanda.com
 .spot.im
+.medallia.ca
+.signalayer.com
