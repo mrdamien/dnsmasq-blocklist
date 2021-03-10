@@ -244,7 +244,7 @@ function download ($url, $file) {
 
 $hosts = [
     'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0' => "pgl.yoyo.txt",
-    'https://adaway.org/hosts.txt' => "adaway.org.txt",
+//    'https://adaway.org/hosts.txt' => "adaway.org.txt",
     'http://www.malwaredomainlist.com/hostslist/hosts.txt' => "malwaredomainlist.com.txt",
     'https://someonewhocares.org/hosts/zero/hosts' => "someonewhocares.org.txt",
 ];
